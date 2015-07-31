@@ -17,6 +17,8 @@ public class FastConvexHull implements ConvexHullAlgorithm {
 		@SuppressWarnings("unchecked")
 		ArrayList<Point> xSorted = (ArrayList<Point>) points.clone();
 		Collections.sort(xSorted, new XCompare());
+		if (xSorted.size() < 3)
+			return xSorted;
 		
 		int n = xSorted.size();
 		
