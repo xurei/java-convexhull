@@ -13,7 +13,7 @@ import java.util.Comparator;
 public class FastConvexHull implements ConvexHullAlgorithm {
 	
 	@Override
-	public ArrayList<Point> execute(ArrayList<Point> points) {
+	public ArrayList<Point> execute(ArrayList<? extends Point> points) {
 		@SuppressWarnings("unchecked")
 		ArrayList<Point> xSorted = (ArrayList<Point>) points.clone();
 		Collections.sort(xSorted, new XCompare());

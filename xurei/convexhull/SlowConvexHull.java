@@ -13,7 +13,7 @@ import java.util.Comparator;
 public class SlowConvexHull implements ConvexHullAlgorithm {
 	
 	@Override
-	public ArrayList<Point> execute(ArrayList<Point> points) {
+	public ArrayList<Point> execute(ArrayList<? extends Point> points) {
 		int n = points.size();
 		
 		ArrayList<LineSegment> edges = new ArrayList<LineSegment>();
